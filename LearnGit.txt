@@ -1,0 +1,41 @@
+yum install git
+git --version
+mkdir project
+cd project
+git init
+ls -ltrha
+
+How to start from a scpecific location:
+1. Find file <installation drive>\Program Files\Git\etc\bash.bashrc
+2. Add "cd G:/Ehsan/Git;" at the end of the file
+
+git status
+touch index.html	// Creates a new file in linux
+// Now, write sth in the file
+git status			// Shows that we have an untracked file
+git add index.html	// Asks git to keep tracking of the file. The files will not be tracked until we add them
+git status			// Specifes that a file is uncommitted and in Stage (so-called) state
+
+//to set your account's default identity. Omit --global to set the identity only in this repository.
+git config --global user.email "ehsan7313@yahoo.com"
+git config --global user.name "ehsan"
+
+git commit -m 'index file created'		// Commits what we have changed with description
+git status 			// Shows nothing to commit
+
+// Now I change index.html and also touch two new files "myfile.html" and "yourfile.html"
+// We can touch multiple files in one cmd-line: touch file1.html file2.html ...
+git status			// Shows that we've got changes on index.html and two untracked files
+git add '*.html'	~or~	git add -A		// Adds all files to the repository.
+// Note: When we even modify a file we should add it again. Here index.html was added or we add all the files, modified or new ones
+git commit -m 'new files added and index modified'
+
+git log
+git diff head -u	// Displays changes occured in the last (head) files
+git diff --staged	// What has changed in the staged files
+git reset page1.html	// Unstages page1.html , so the file would not be comitted unless we add it again
+git checkout -- page1.html	// Ignores all the uncommited changes of page1.html and changes it to the last committed one
+
+git branch			// Returns the branches. The main branch is called master
+git branch fixpages	// Makes a new branch and copies the current files in it. The current branch will be unchanged: master
+git checkout fixpages	// Now we switch into the new branch

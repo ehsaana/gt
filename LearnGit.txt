@@ -42,5 +42,5 @@ git checkout fixpages	// Now we switch into the new branch
 
 //To merge fixpages banch with master branch, first we switch back to master: git checkout master, then:
 git merge fixpages
-git rm page3.html	// Removes file from both git and file-system
+git rm page3.html	// Removes file from both git andgit  file-system
 git branch -d fixpages	// Deletes the branch

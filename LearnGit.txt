@@ -39,3 +39,8 @@ git checkout -- page1.html	// Ignores all the uncommited changes of page1.html a
 git branch			// Returns the branches. The main branch is called master
 git branch fixpages	// Makes a new branch and copies the current files in it. The current branch will be unchanged: master
 git checkout fixpages	// Now we switch into the new branch
+
+//To merge fixpages banch with master branch, first we switch back to master: git checkout master, then:
+git merge fixpages
+git rm page3.html	// Removes file from both git and file-system
+git branch -d fixpages	// Deletes the branch

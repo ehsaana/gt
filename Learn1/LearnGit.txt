@@ -31,6 +31,10 @@ git add '*.html'	~or~	git add -A		// Adds all files to the repository.
 git commit -m 'new files added and index modified'
 
 git log
+در خروجی دستور لاگ برای هر کامیت یک هش کد خاص در نظر گرفته شده است
+با این هش کد میشه جزییات یک کامیت خاص رو هم بررسی کرد:
+git show 8419c25ff1c4084c27a59aee04e054e0fe2589b2
+
 git diff head -u	// Displays changes occured in the last (head) files
 git diff --staged	// What has changed in the staged files
 git reset page1.html	// Unstages page1.html , so the file would not be comitted unless we add it again
@@ -75,3 +79,9 @@ git push -u origin master
 
 اگر یک فایل رل دو نفر تغییر داده باشند دچار کانفلیکت میشویم
 یعنی دستور پوش بالا با خطا روبرو میشه و خود گیت پیشنهاد میکنه که یکبار قبلش پول کنیم بعد پوش
+اما گاهی با وجود پول کردن باز هم مشکل هست و گیت از ما میخواد که کانفلیکت رو حل کنیم دوباره کامیت کنیم
+
+برای ورژن گذاری روی برنامه:
+git tag -a V1.0 -m 'This is the first version'
+برای اینکه بفهمیم آخرین تگ چی بوده:
+git tag

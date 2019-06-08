@@ -100,4 +100,6 @@ git push origin V1.0 		OR		git push origin --tags
 برای برگشتن به یک ورژن:
 git checkout V0.5
 این کار با برنچ ساخت فرق داره، الان با انجام تغییرات روی ورژن قبل نمیشه همون ورژن رو پوش کرد
+برای برگشتن به ورژن آخر:
+git checkout master
 
